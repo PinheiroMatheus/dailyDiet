@@ -1,8 +1,15 @@
+import { View } from "react-native";
+
 import styled from "styled-components/native";
 
 import theme from "@theme/index";
 
-export const Container = styled.View`
+export type StatusTypeStyleProps = 'POSITIVE' | 'NEGATIVE'
+type Props = {
+    type: StatusTypeStyleProps;
+}
+
+export const Container = styled(View) <Props>`
     width: 100%;
     height: 102px;
     margin-top: 32px;
@@ -12,7 +19,7 @@ export const Container = styled.View`
     justify-content: center;
     align-items: center;
 
-    background-color: ${ theme.COLORS.GREEN_LIGTH };
+    background-color: ${({ type }) => type === 'POSITIVE' ? theme.COLORS.GREEN_LIGTH : theme.COLORS.RED_LIGTH};
     color: ${ theme.COLORS.GREY_1 };
 `;
 

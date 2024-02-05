@@ -1,9 +1,14 @@
-import { Container, Title, SubTitle } from "./styles";
+import { Container, Title, SubTitle, StatusTypeStyleProps } from "./styles";
 
-export function CardStatusDiet() {
+type Props = {
+    value: number;
+    type: StatusTypeStyleProps;
+}
+
+export function CardStatusDiet({ type, value }: Props) {
     return (
-        <Container >
-            <Title> 90,86% </Title>
+        <Container type={type}>
+            <Title> {value}% </Title>
             <SubTitle> das refeições dentro da dieta </SubTitle>
         </Container>
     )

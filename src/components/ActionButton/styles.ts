@@ -11,7 +11,6 @@ type Props = {
 
 export const Container = styled(TouchableOpacity)<Props>`
     width: 100%;
-    margin-top: 40px;
     padding: 16px;
     border-radius: 6px;
 

@@ -13,6 +13,7 @@ export const Container = styled(View) <Props>`
     width: 100%;
     height: 102px;
     margin-top: 32px;
+    margin-bottom: 40px;
     padding: 20px 16px;
     border-radius: 8px;
 

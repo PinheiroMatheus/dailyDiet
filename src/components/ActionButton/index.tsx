@@ -1,13 +1,14 @@
-import { Container, Title } from "./styles";
+import { Container, Title, ActionButtonTypeProps } from "./styles";
 
 type Props = {
-    ActionButtonTextProps: string; 
+    ActionButtonTextProps: string;
+    type?: ActionButtonTypeProps;
 }
 
-export function ActionButton({ActionButtonTextProps}: Props) {
+export function ActionButton({ActionButtonTextProps, type = 'DARK'}: Props) {
     return (
-        <Container>
-            <Title>
+        <Container type={type}>
+            <Title type={type}>
                 { ActionButtonTextProps }
             </Title>
         </Container>

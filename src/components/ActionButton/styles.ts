@@ -4,21 +4,26 @@ import theme from "@theme/index";
 
 import { TouchableOpacity } from "react-native";
 
-export const Container = styled(TouchableOpacity)`
+export type ActionButtonTypeProps = 'LIGHT'| 'DARK';
+type Props = {
+    type: ActionButtonTypeProps;
+}
+
+export const Container = styled(TouchableOpacity)<Props>`
     width: 100%;
     margin-top: 40px;
-    /* max-height: 29px; */
     padding: 16px;
     border-radius: 6px;
 
     justify-content: center;
     align-items: center;
     
-    background-color: ${ theme.COLORS.GREY_2 };
+    background-color: ${({ type }) => type == 'DARK' ? theme.COLORS.GREY_2 : theme.COLORS.WHITE};
+    border: solid 1px ${ theme.COLORS.GREY_2 };
 `;
 
-export const Title = styled.Text`
-    color: ${ theme.COLORS.WHITE };
+export const Title = styled.Text<Props>`
+    color: ${({ type }) => type === 'DARK' ? theme.COLORS.WHITE : theme.COLORS.GREY_1};
     font-size: ${ theme.FONT_SIZE.MD }px;
     font-family: ${ theme.FONT_FAMILY.BOLD };
 `;

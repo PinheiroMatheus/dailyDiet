@@ -16,6 +16,7 @@ export function Home() {
       />
       <ActionButton 
         ActionButtonTextProps='Nova refeição'
+        type='LIGHT'
       />
     </Container>
   );

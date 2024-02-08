@@ -20,6 +20,7 @@ export function Home() {
       <ActionButton 
         ActionButtonTextProps='Nova refeição'
         type='DARK'
+        Icon='PLUS'
       />
     </Container>
   );

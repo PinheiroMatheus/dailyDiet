@@ -1,6 +1,8 @@
-import { TouchableOpacity} from "react-native";
-
 import styled from "styled-components/native";
+
+import { TouchableOpacity} from "react-native";
+import { ArrowUpRight } from "phosphor-react-native"
+
 
 import theme from "@theme/index";
 
@@ -32,4 +34,14 @@ export const Title = styled.Text`
 export const SubTitle = styled.Text`
     font-family: ${ theme.FONT_FAMILY.REGULAR };
     font-size: ${ theme.FONT_SIZE.MD }px;
+`;
+
+export const PencilIcon = styled(ArrowUpRight).attrs<Props>(({ type }) => ({
+    color: type == 'POSITIVE' ? theme.COLORS.GREEN_DARK : theme.COLORS.RED_DARK,
+    size: 24,
+}))`
+    position: absolute;
+    align-self: flex-end;
+    top: 8px;
+    right: 8px;
 `;

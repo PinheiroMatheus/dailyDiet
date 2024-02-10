@@ -34,8 +34,6 @@ export const Title = styled.Text`
     color: ${theme.COLORS.GREY_2};
     font-size: ${theme.FONT_SIZE.LG}px;
     font-family: ${theme.FONT_FAMILY.REGULAR};
-
-    text-overflow: ellipsis;
 `;
 
 export const DotIndicator = styled.View<Props>`

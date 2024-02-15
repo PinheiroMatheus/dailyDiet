@@ -3,7 +3,8 @@ import { Text } from 'react-native';
 import { Header } from '@components/Header';
 import { CardStatusDiet } from '@components/CardStatusDiet';
 import { ActionButton } from '@components/ActionButton';
-import { SectionListCard } from '@components/sectionListCard';
+import { SectionListCard } from '@components/SectionListCard';
+import { SectionListExample } from '@components/SectionList';
 
 import theme from '@theme/index';
 import { Container } from './styles';
@@ -26,11 +27,7 @@ export function Home() {
         Icon='PLUS'
       />
 
-      <SectionListCard 
-        hour='20:00'
-        title='X-Burguer'
-        type= 'NEGATIVE'
-      />
+      <SectionListExample />
     </Container>
   );
 }

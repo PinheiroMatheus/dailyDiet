@@ -5,6 +5,7 @@ import { useFonts, NunitoSans_400Regular, NunitoSans_700Bold } from '@expo-googl
 import theme from "@theme/index";
 import { Home } from "@screens/Home";
 import { Loading } from "@components/Loading";
+import { Statistics } from "@screens/Statistics";
 
 export default function App() {
   const [fontsLoaded] = useFonts({ NunitoSans_400Regular, NunitoSans_700Bold });
@@ -17,7 +18,7 @@ export default function App() {
         translucent
       />
       
-      { fontsLoaded ? <Home /> :  <Loading />}
+      { fontsLoaded ? <Statistics /> :  <Loading />}
     </ThemeProvider>
   );
 }

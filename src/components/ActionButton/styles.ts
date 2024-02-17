@@ -4,7 +4,6 @@ import { PencilSimpleLine, Trash, Plus } from "phosphor-react-native"
 import theme from "@theme/index";
 
 import { TouchableOpacity } from "react-native";
-import { Colors } from "react-native/Libraries/NewAppScreen";
 
 export type ActionButtonTypeProps = 'LIGHT'| 'DARK';
 type Props = {

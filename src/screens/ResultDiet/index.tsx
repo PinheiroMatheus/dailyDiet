@@ -1,11 +1,37 @@
-import { Button, Container, SubTitle, Title } from "./styles";
+import congratulation from '@assets/congratulation.png'
+import fail from '@assets/fail.png'
+import { Text } from "react-native";
 
-export function ResultDiet() {
+import { Button, ButtonText, Container, Image, SubTitle, Title, TypeStyleProps } from "./styles";
+
+type Props = {
+    type: TypeStyleProps;
+}
+
+export function ResultDiet({type}: Props) {
     return (
         <Container>
-            <Title>Continue assim!</Title>
-            <SubTitle>Você continua dentro da dieta. Muito bem!</SubTitle>
-            <Button/>
+            {
+                type === 'POSITIVE' ? 
+                    (
+                        <>
+                            <Title type={type}>Continue assim!</Title>
+                            <SubTitle>Você continua <Text style={{fontWeight: "bold"}}>dentro da dieta</Text>. Muito bem!</SubTitle>
+                            <Image source={congratulation}/>
+                        </>
+                    )
+                    :
+                    (
+                        <>
+                            <Title type={type}>Que pena!</Title>
+                            <SubTitle>Você <Text style={{fontWeight: "bold"}}>saiu da dieta</Text> dessa vez, mas continue se esforçando e não desista!</SubTitle>
+                            <Image source={fail}/>
+                        </>
+                    )
+            }
+            <Button>
+                <ButtonText>Ir para a página inicial</ButtonText>
+            </Button>
         </Container>
     )
 }

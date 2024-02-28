@@ -19,7 +19,7 @@ export default function App() {
         translucent
       />
       
-      { fontsLoaded ? <ResultDiet /> :  <Loading />}
+      { fontsLoaded ? <ResultDiet type="POSITIVE"/> :  <Loading />}
     </ThemeProvider>
   );
 }
